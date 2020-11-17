@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.sunchaser.voyeur</groupId>
+    <artifactId>sunchaser-voyeur</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>sunchaser-voyeur-admin</module>
+        <module>sunchaser-voyeur-api</module>
+        <module>sunchaser-voyeur-common</module>
+        <module>sunchaser-voyeur-repository</module>
+        <module>sunchaser-voyeur-scheduler</module>
+        <module>sunchaser-voyeur-core</module>
+        <module>sunchaser-voyeur-domain</module>
+    </modules>
+
+    <properties>
+        <java.version>1.8</java.version>
+        <spring-boot.version>2.1.6.RELEASE</spring-boot.version>
+        <sunchaser-voyeur.version>1.0-SNAPSHOT</sunchaser-voyeur.version>
+        <lombok.version>1.18.10</lombok.version>
+        <google-guava.version>28.1-jre</google-guava.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <!-- spring boot -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring-boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <!-- google guava -->
+            <dependency>
+                <groupId>com.google.guava</groupId>
+                <artifactId>guava</artifactId>
+                <version>${google-guava.version}</version>
+            </dependency>
+            <!-- module dependency -->
+            <dependency>
+                <groupId>com.sunchaser.voyeur</groupId>
+                <artifactId>sunchaser-voyeur-common</artifactId>
+                <version>${sunchaser-voyeur.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.sunchaser.voyeur</groupId>
+                <artifactId>sunchaser-voyeur-core</artifactId>
+                <version>${sunchaser-voyeur.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.1</version>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
