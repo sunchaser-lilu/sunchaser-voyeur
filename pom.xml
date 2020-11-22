@@ -16,6 +16,7 @@
         <module>sunchaser-voyeur-scheduler</module>
         <module>sunchaser-voyeur-core</module>
         <module>sunchaser-voyeur-domain</module>
+        <module>sunchaser-voyeur-integration</module>
     </modules>
 
     <properties>
@@ -24,6 +25,8 @@
         <sunchaser-voyeur.version>1.0-SNAPSHOT</sunchaser-voyeur.version>
         <lombok.version>1.18.10</lombok.version>
         <google-guava.version>28.1-jre</google-guava.version>
+        <webmagic-core.version>0.7.4</webmagic-core.version>
+        <webmagic-extension.version>0.7.4</webmagic-extension.version>
     </properties>
 
     <dependencyManagement>
@@ -42,6 +45,17 @@
                 <artifactId>guava</artifactId>
                 <version>${google-guava.version}</version>
             </dependency>
+            <!-- webmagic -->
+            <dependency>
+                <groupId>us.codecraft</groupId>
+                <artifactId>webmagic-core</artifactId>
+                <version>${webmagic-core.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>us.codecraft</groupId>
+                <artifactId>webmagic-extension</artifactId>
+                <version>${webmagic-extension.version}</version>
+            </dependency>
             <!-- module dependency -->
             <dependency>
                 <groupId>com.sunchaser.voyeur</groupId>
@@ -51,6 +65,11 @@
             <dependency>
                 <groupId>com.sunchaser.voyeur</groupId>
                 <artifactId>sunchaser-voyeur-core</artifactId>
+                <version>${sunchaser-voyeur.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.sunchaser.voyeur</groupId>
+                <artifactId>sunchaser-voyeur-domain</artifactId>
                 <version>${sunchaser-voyeur.version}</version>
             </dependency>
         </dependencies>

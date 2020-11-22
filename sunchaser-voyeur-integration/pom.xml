@@ -9,9 +9,8 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>sunchaser-voyeur-core</artifactId>
+    <artifactId>sunchaser-voyeur-integration</artifactId>
     <version>1.0-SNAPSHOT</version>
-
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -20,10 +19,6 @@
         <dependency>
             <groupId>com.sunchaser.voyeur</groupId>
             <artifactId>sunchaser-voyeur-common</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.sunchaser.voyeur</groupId>
-            <artifactId>sunchaser-voyeur-domain</artifactId>
         </dependency>
         <dependency>
             <groupId>us.codecraft</groupId>
