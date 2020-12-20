@@ -9,14 +9,14 @@
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <modules>
-        <module>sunchaser-voyeur-admin</module>
-        <module>sunchaser-voyeur-api</module>
-        <module>sunchaser-voyeur-common</module>
-        <module>sunchaser-voyeur-repository</module>
-        <module>sunchaser-voyeur-scheduler</module>
-        <module>sunchaser-voyeur-core</module>
-        <module>sunchaser-voyeur-domain</module>
-        <module>sunchaser-voyeur-integration</module>
+        <module>voyeur-admin</module>
+        <module>voyeur-api</module>
+        <module>voyeur-common</module>
+        <module>voyeur-repository</module>
+        <module>voyeur-scheduler</module>
+        <module>voyeur-core</module>
+        <module>voyeur-domain</module>
+        <module>voyeur-integration</module>
     </modules>
 
     <properties>
@@ -59,17 +59,17 @@
             <!-- module dependency -->
             <dependency>
                 <groupId>com.sunchaser.voyeur</groupId>
-                <artifactId>sunchaser-voyeur-common</artifactId>
+                <artifactId>voyeur-common</artifactId>
                 <version>${sunchaser-voyeur.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.sunchaser.voyeur</groupId>
-                <artifactId>sunchaser-voyeur-core</artifactId>
+                <artifactId>voyeur-core</artifactId>
                 <version>${sunchaser-voyeur.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.sunchaser.voyeur</groupId>
-                <artifactId>sunchaser-voyeur-domain</artifactId>
+                <artifactId>voyeur-domain</artifactId>
                 <version>${sunchaser-voyeur.version}</version>
             </dependency>
         </dependencies>
